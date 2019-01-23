@@ -38,7 +38,14 @@
           </li>
         </ul>
         <div class="form-inline my-2 my-lg-0">
-          <button class="btn btn-outline-info my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal">Connexion / S'enregistrer</button>
+          <?php if(isset($_SESSION['id'])) {  ?>
+            <a class="btn btn-outline-info" href="?function=logout">Logout</a>
+          <?php } else { ?>
+            <button class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModal">Connexion / S'enregistrer</button>
+          <?php } ?>
+
+        
+          
         </div>
       </div>
     </nav>

@@ -26,6 +26,7 @@
         </div>
           
           <div class="modal-body">
+            <div class="alert alert-danger" id="loginAlert" style="display: none;"></div>
             <form>
               <input type="hidden" id="loginActive" name="loginActive" value="1">
               <div class="form-group">
@@ -76,11 +77,14 @@
             data: "email=" + $("#email").val() + "&password=" + $("#password").val() + "&loginActive=" + $("#loginActive").val(),
             success: function(result) {
               if (result == "1") {
-                windows.location.assign("/twitclone");
-
-              } else {
-
-              }
+                    
+                    window.location.assign("/twitclone");
+                    
+                } else {
+                    
+                    $("#loginAlert").html(result).show();
+                    
+                }
             }
             
         })
