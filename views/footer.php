@@ -75,7 +75,12 @@
             url: "actions.php?action=loginSignup",
             data: "email=" + $("#email").val() + "&password=" + $("#password").val() + "&loginActive=" + $("#loginActive").val(),
             success: function(result) {
-                alert(result);
+              if (result == "1") {
+                windows.location.assign("/twitclone");
+
+              } else {
+
+              }
             }
             
         })
