@@ -1,3 +1,40 @@
+
+.mainCtr {
+  padding: 20px;
+}
+
+.merriweather-font {
+  font-family: 'Bitter', serif;
+  color: #5aaaa1;
+}
+
+#loginAlert {
+    
+  display: none;
+  
+}
+
+.time {
+  color: #9e2700;
+}
+
+.tweet {
+  /* border: 1px solid grey;
+  -moz-box-shadow:    3px 3px 3px 3px #ccc;
+  -webkit-box-shadow: 3px 3px 3px 3px #ccc;
+  box-shadow:         3px 3px 3px 3px #ccc;
+  padding: 5px;
+  margin: 5px; */
+
+  border-radius: 3px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 10px 25px;
+  text-align: left;
+  display: block;
+  margin-top: 60px;
+  background-image: linear-gradient(to right top, #ffffff, #f8fbff, #edf8ff, #e0f6fc, #d5f4f3);
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -8,6 +45,11 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
+
+
+
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -18,8 +60,3 @@ body {
   background-color: #f5f5f5;
 }
 
-#loginAlert {
-    
-  display: none;
-  
-}

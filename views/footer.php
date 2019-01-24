@@ -72,23 +72,40 @@
       $("#loginSignupButton").click(function() {
         
         $.ajax({
-            type: "POST",
-            url: "actions.php?action=loginSignup",
-            data: "email=" + $("#email").val() + "&password=" + $("#password").val() + "&loginActive=" + $("#loginActive").val(),
-            success: function(result) {
-              if (result == "1") {
-                    
-                    window.location.assign("/twitclone");
-                    
-                } else {
-                    
-                    $("#loginAlert").html(result).show();
-                    
-                }
-            }
-            
+          type: "POST",
+          url: "actions.php?action=loginSignup",
+          data: "email=" + $("#email").val() + "&password=" + $("#password").val() + "&loginActive=" + $("#loginActive").val(),
+          success: function(result) {
+            if (result == "1") {
+                  
+              window.location.assign("/twitclone");
+                  
+              } else {
+                  
+                $("#loginAlert").html(result).show();
+              }
+          }
         })
         
+      })
+
+      $(".toggleFollow").click(function(){
+
+        let id = $(this).attr("data-userId")
+      
+        $.ajax({
+          type: "POST",
+          url: "actions.php?action=toggleFollow",
+          data: "userId="+ id,
+          success: function(result) {
+            if (result == "1") {
+              $("a[data-userId='"+id+"']").html("Suivre");
+            } else if (result == "2") {
+              $("a[data-userId='"+id+"']").html("Ne Plus Suivre");
+            }
+          }
+        })
+
       })
 
     </script>

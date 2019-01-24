@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
     <!-- Material Design for Bootstrap fonts and icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
 
@@ -39,7 +39,7 @@
         </ul>
         <div class="form-inline my-2 my-lg-0">
           <?php if(isset($_SESSION['id'])) {  ?>
-            <a class="btn btn-outline-info" href="?function=logout">Logout</a>
+            <a class="btn btn-outline-info" href="?function=logout">Se déconnecter</a>
           <?php } else { ?>
             <button class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModal">Connexion / S'enregistrer</button>
           <?php } ?>
